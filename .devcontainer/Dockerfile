@@ -28,12 +28,26 @@ RUN apt install -y gazebo11 libgazebo11-dev
 
 RUN apt install -y libjansson-dev libboost-dev imagemagick libtinyxml-dev mercurial cmake build-essential
 
-RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash 
+# Install nvm with node and npm
+ENV NVM_DIR /usr/local/nvm
+ENV NODE_VERSION 8
 
-# use bash -c to execute the following commands, which need to use source or other bash-specific functionality
-RUN /bin/bash -c "source ~/.bashrc"
-#RUN /bin/bash -c "nvm install 8"
-#RUN /bin/bash -c "source /usr/share/gazebo/setup.sh"
+RUN mkdir -p $NVM_DIR \
+  && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash \
+  && . $NVM_DIR/nvm.sh \
+  && nvm install $NODE_VERSION \
+  && nvm alias default $NODE_VERSION \
+  && nvm use default
+
+ENV NODE_PATH $NVM_DIR/v$NODE_VERSION/lib/node_modules
+ENV PATH $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
+
+# confirm installation
+RUN . $NVM_DIR/nvm.sh && node -v && npm -v
+
+# install git
+RUN apt-get install -y git
+
 
 # Switch back to dialog for any ad-hoc use of apt-get
 ENV DEBIAN_FRONTEND=dialog

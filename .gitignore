@@ -1,0 +1,23 @@
+# Build Outputs
+gzweb/build
+gzweb/gz3d/build
+gzweb/build_*
+
+# Just Mac Things
+gzweb/.DS_Store
+
+# Just IDE Things
+*.vscode
+
+# Etc
+gzweb/*.*~
+gzweb/*~
+gzweb/*.orig
+gzweb/*.swp
+gzweb/http/client/assets
+gzweb/node_modules
+gzweb/http/client
+gzweb/coverage
+gzweb/doc
+gzweb/npm-debug.log
+gzweb/test_results
