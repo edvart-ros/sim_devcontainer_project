@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
 # To be deprecated and replaced by webify_models_v2.py
 

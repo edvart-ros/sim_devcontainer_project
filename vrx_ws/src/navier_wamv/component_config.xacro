@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="wam-v-components">
+  <xacro:macro name="yaml_components">
+    <!-- === wamv_camera === -->
+      <xacro:wamv_camera name="front_camera" x="0.75" y="0.0" z="1.85" P="${radians(15)}" />
+
+    <!-- === wamv_gps === -->
+      <xacro:wamv_gps name="gps_wamv" x="-0.85" />
+
+    <!-- === wamv_imu === -->
+      <xacro:wamv_imu name="imu_wamv" y="-0.2" />
+
+    <!-- === lidar === -->
+      <xacro:lidar name="lidar_wamv" type="16_beam" P="${radians(8)}" />
+
+  </xacro:macro>
+</robot>

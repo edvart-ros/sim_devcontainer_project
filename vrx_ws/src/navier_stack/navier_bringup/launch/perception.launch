@@ -1,0 +1,3 @@
+<launch>
+    <node name="buoy_detector_full" pkg ="navier_object_detection" type="buoy_detector_full.py" output="screen"/>
+</launch>

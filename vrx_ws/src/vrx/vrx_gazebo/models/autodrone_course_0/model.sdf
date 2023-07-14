@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="autodrone_course_0">
+    <include>
+      <name>mb_round_buoy_green_0</name>
+      <pose>0.0 3.0 0.0 0 0 0 </pose>
+      <uri>model://mb_round_buoy_green</uri>
+    </include>
+
+    <include>
+      <name>mb_round_buoy_orange_0</name>
+      <pose>0.0 10.0 0.0 0 0 0 </pose>
+      <uri>model://mb_round_buoy_orange</uri>
+    </include>
+
+    <include>
+      <name>mb_round_buoy_green_1</name>
+      <pose>15.0 0.0 0.0 0 0 0 </pose>
+      <uri>model://mb_round_buoy_green</uri>
+    </include>
+
+    <include>
+      <name>mb_round_buoy_orange_1</name>
+      <pose>15.0 7.0 0.0 0 0 0 </pose>
+      <uri>model://mb_round_buoy_orange</uri>
+    </include>
+
+    <include>
+      <name>mb_round_buoy_green_2</name>
+      <pose>30.0 -6.0 0.0 0 0 0 </pose>
+      <uri>model://mb_round_buoy_green</uri>
+    </include>
+
+    <include>
+      <name>mb_round_buoy_orange_2</name>
+      <pose>30.0 1.0 0.0 0 0 0 </pose>
+      <uri>model://mb_round_buoy_orange</uri>
+    </include>
+
+    <include>
+      <name>mb_round_buoy_green_3</name>
+      <pose>45.0 -2.0 0.0 0 0 0 </pose>
+      <uri>model://mb_round_buoy_green</uri>
+    </include>
+
+    <include>
+      <name>mb_round_buoy_orange_3</name>
+      <pose>45.0 5.0 0.0 0 0 0 </pose>
+      <uri>model://mb_round_buoy_orange</uri>
+    </include>
+
+  </model>
+</sdf>

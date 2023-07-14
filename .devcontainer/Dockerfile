@@ -51,3 +51,5 @@ RUN apt-get install -y git
 
 # Switch back to dialog for any ad-hoc use of apt-get
 ENV DEBIAN_FRONTEND=dialog
+
+RUN /bin/bash -c "source /usr/share/gazebo/setup.sh"

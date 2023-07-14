@@ -1,0 +1,8 @@
+<launch>
+  <node name="odom_publisher" pkg="control" type="odom.py" output="screen"/>
+
+  <!-- starting controllers and guidance nodes -->
+  <node name="allocate_thrust" pkg="control" type="allocate_thrust.py" output="screen"/>
+  <node name="control_server" pkg="control" type="control_server.py" output="screen"/>
+
+</launch>

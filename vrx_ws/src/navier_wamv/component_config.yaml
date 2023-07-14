@@ -1,0 +1,16 @@
+wamv_camera:
+    - name: front_camera
+      x: 0.75
+      y: 0.0
+      z: 1.85
+      P: ${radians(15)}
+wamv_gps:
+    - name: gps_wamv
+      x: -0.85
+wamv_imu:
+    - name: imu_wamv
+      y: -0.2
+lidar:
+    - name: lidar_wamv
+      type: 16_beam
+      P: ${radians(8)}

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="autodrone_course_1">
+    <include>
+      <name>mb_round_buoy_orange_0</name>
+      <pose>0.0 6.0 0.0 0 0 0 </pose>
+      <uri>model://mb_round_buoy_orange</uri>
+    </include>
+
+    <include>
+      <name>mb_round_buoy_green_0</name>
+      <pose>0.0 0.0 0.0 0 0 0 </pose>
+      <uri>model://mb_round_buoy_green</uri>
+    </include>
+
+    <include>
+      <name>mb_round_buoy_yellow_0</name>
+      <pose>30.0 3.0 0.0 0 0 0 </pose>
+      <uri>model://mb_round_buoy_yellow</uri>
+    </include>
+
+
+  </model>
+</sdf>

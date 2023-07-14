@@ -1,0 +1,22 @@
+<launch>
+  <arg name="urdf" default="/workspaces/sim_devcontainer_project/vrx_ws/src/vrx_navier/navier_wamv/navier_wamv.urdf" />
+  <include file="$(find vrx_gazebo)/launch/sydneyregatta.launch">
+        <arg name="urdf" value="$(arg urdf)"/>
+        <arg name="gui" value="false" />
+  </include>
+  <!-- Publishes static joint transforms (lidar, cameras, etc) to /tf -->
+  <node ns="wamv" pkg="robot_state_publisher" type="robot_state_publisher" name="rob_st_pub"/>
+
+  
+  <!-- arg name="rviz_config" default="$(find wamv_gazebo)/config/rviz_vrx.rviz" />
+  <node pkg="rviz" type="rviz"
+        name="wamv_visualization" args="-d $(arg rviz_config)" /> -->
+
+
+  <!-- Publishes revolute joint static transforms (gps and imu) to /tf -->
+  <!-- This is currently disabled as it breaks the thruster transforms. it seems to conflict with states publishes directly by gazebo-->
+  <!-- Enabling this will cause thruster tf flickering -->
+  <!-- <node ns="wamv" pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher">
+    <param name="gui" value="false" />
+  </node> -->
+</launch>
