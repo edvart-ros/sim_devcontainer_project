@@ -24,3 +24,4 @@ gzweb/test_results
 
 vrx_ws/devel/*
 vrx_ws/build/*
+vrx_ws/src/CMakeLists.txt

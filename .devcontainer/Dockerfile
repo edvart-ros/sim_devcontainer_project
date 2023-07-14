@@ -61,6 +61,29 @@ RUN cd /workspaces/sim_devcontainer_project/vrx_ws && rosdep install --from-path
 
 RUN apt install -y gazebo11 libgazebo11-dev
 
+
+# Install dependencies
+RUN apt-get install -y build-essential cmake cppcheck curl git gnupg libeigen3-dev libgles2-mesa-dev lsb-release pkg-config protobuf-compiler qtbase5-dev python3-dbg python3-pip python3-venv ruby software-properties-common wget 
+
+# Set up ROS and Gazebo repositories
+RUN echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list && \
+    apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654 && \
+    echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list && \
+    wget http://packages.osrfoundation.org/gazebo.key -O - | apt-key add -
+
+# Update package list
+RUN apt-get update
+
+# Set ROS and Gazebo versions
+ARG DIST=noetic
+ARG GAZ=gazebo11
+END ROS_DISTRO noetic
+# Install ROS and Gazebo
+RUN apt-get install -y ${GAZ} lib${GAZ}-dev ros-${DIST}-gazebo-plugins ros-${DIST}-gazebo-ros ros-${DIST}-hector-gazebo-plugins ros-${DIST}-joy ros-${DIST}-joy-teleop ros-${DIST}-key-teleop ros-${DIST}-robot-localization ros-${DIST}-robot-state-publisher ros-${DIST}-joint-state-publisher ros-${DIST}-rviz ros-${DIST}-ros-base ros-${DIST}-teleop-tools ros-${DIST}-teleop-twist-keyboard ros-${DIST}-velodyne-simulator ros-${DIST}-xacro ros-${DIST}-rqt ros-${DIST}-rqt-common-plugins
+
+
+# install gzweb deps
+
 RUN apt install -y libjansson-dev libboost-dev imagemagick libtinyxml-dev mercurial cmake build-essential
 
 # Install nvm with node and npm
