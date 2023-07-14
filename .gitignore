@@ -22,3 +22,5 @@ gzweb/doc
 gzweb/npm-debug.log
 gzweb/test_results
 
+vrx_ws/devel/*
+vrx_ws/build/*
