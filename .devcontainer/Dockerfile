@@ -77,7 +77,7 @@ RUN apt-get update
 # Set ROS and Gazebo versions
 ARG DIST=noetic
 ARG GAZ=gazebo11
-END ROS_DISTRO noetic
+ENV ROS_DISTRO noetic
 # Install ROS and Gazebo
 RUN apt-get install -y ${GAZ} lib${GAZ}-dev ros-${DIST}-gazebo-plugins ros-${DIST}-gazebo-ros ros-${DIST}-hector-gazebo-plugins ros-${DIST}-joy ros-${DIST}-joy-teleop ros-${DIST}-key-teleop ros-${DIST}-robot-localization ros-${DIST}-robot-state-publisher ros-${DIST}-joint-state-publisher ros-${DIST}-rviz ros-${DIST}-ros-base ros-${DIST}-teleop-tools ros-${DIST}-teleop-twist-keyboard ros-${DIST}-velodyne-simulator ros-${DIST}-xacro ros-${DIST}-rqt ros-${DIST}-rqt-common-plugins
 
