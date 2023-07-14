@@ -7,17 +7,14 @@
         "pb2json.cc", "pb2json.hh",
         "ConfigLoader.cc", "ConfigLoader.hh",
         "OgreMaterialParser.cc", "OgreMaterialParser.hh"],
-      "include_dirs" : [
-        "<!(node -e \"require('nan')\")"
-      ],
       'cflags_cc!': [ '-fno-rtti', '-fno-exceptions' ],
       'cflags!': [ '-fno-exceptions' ],
-      "cflags_cc": [ '-std=c++17', '-Wall'],
       "conditions": [
         ['OS=="linux"', {
           'cflags': [
             '<!@(pkg-config --cflags gazebo jansson protobuf)'
           ],
+          'cflags_cc': [ '-fno-rtti', '-fno-exceptions', '-std=c++17' ],
           'ldflags': [
             '<!@(pkg-config --libs-only-L --libs-only-other gazebo jansson protobuf)'
           ],

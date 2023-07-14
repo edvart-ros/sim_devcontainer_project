@@ -12,11 +12,6 @@ module.exports = function(config) {
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['jasmine'],
 
-    client: {
-      jasmine: {
-        random: false
-      }
-    },
 
     // list of files / patterns to load in the browser
     files: [
@@ -36,7 +31,6 @@ module.exports = function(config) {
       "gz3d/client/js/include/MTLLoader.js",
       "gz3d/client/js/include/STLLoader.js",
       "gz3d/client/js/include/xml2json.js",
-      "gz3d/client/js/include/lodash.js",
       'gz3d/client/style/gz3d.css',
       "gz3d/test/utils/angular-mocks.min.js",
       'gz3d/test/fixture/*.js',
@@ -44,7 +38,6 @@ module.exports = function(config) {
       'gz3d/test/fixture/*.html',
       'gz3d/test/*.js',
       {pattern: 'gz3d/test/utils/beer/*', included: false, served: true, watched: false, nocache: true},
-      {pattern: 'gz3d/test/utils/beer/materials/scripts/*', included: false, served: true, watched: false, nocache: true},
       {pattern: 'gz3d/test/utils/walkway_metal_straight/*', included: false, served: true, watched: false, nocache: true},
       {pattern: 'gz3d/test/utils/walkway_metal_straight/meshes/*', included: false, served: true, watched: false, nocache: true},
       {pattern: 'gz3d/test/utils/house_2/*', included: false, served: true, watched: false, nocache: true},
@@ -105,7 +98,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Firefox', 'FirefoxHeadless', 'ChromeHeadless'],
+    browsers: ['Chrome'],
 
 
     // Continuous Integration mode

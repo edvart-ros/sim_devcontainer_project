@@ -18,46 +18,62 @@
 #ifndef GZBRIDGE_GZNODE_HH_
 #define GZBRIDGE_GZNODE_HH_
 
-#include <nan.h>
+#include <node.h>
+#include <node_object_wrap.h>
 
 namespace gzweb
 {
+  using v8::FunctionCallbackInfo;
+  using v8::Value;
+  using v8::FunctionTemplate;
+  using v8::Object;
+  using v8::Persistent;
 
   class GazeboInterface;
 
-  class GZNode : public Nan::ObjectWrap
+  class GZNode : public node::ObjectWrap
   {
-    public: static NAN_MODULE_INIT(Init);
+    public: static void Init(v8::Handle<v8::Object> exports);
 
     private: GZNode();
 
     private: ~GZNode();
 
-    private: static NAN_METHOD(New);
+    private: static void New(const FunctionCallbackInfo<Value>& args);
 
-    private: static NAN_METHOD(LoadMaterialScripts);
+    private: static void LoadMaterialScripts(
+        const FunctionCallbackInfo<Value>& args);
 
-    private: static NAN_METHOD(SetConnected);
+    private: static void SetConnected(
+        const FunctionCallbackInfo<Value>& args);
 
-    private: static NAN_METHOD(GetIsGzServerConnected);
+    private: static void GetIsGzServerConnected(
+        const FunctionCallbackInfo<Value>& args);
 
-    private: static NAN_METHOD(GetMaterialScriptsMessage);
+    private: static void GetMaterialScriptsMessage(
+        const FunctionCallbackInfo<Value>& args);
 
-    private: static NAN_METHOD(SetPoseMsgFilterMinimumDistanceSquared);
+    private: static void SetPoseMsgFilterMinimumDistanceSquared(
+        const FunctionCallbackInfo<Value>& args);
 
-    private: static NAN_METHOD(GetPoseMsgFilterMinimumDistanceSquared);
+    private: static void GetPoseMsgFilterMinimumDistanceSquared(
+        const FunctionCallbackInfo<Value>& args);
 
-    private: static NAN_METHOD(SetPoseMsgFilterMinimumQuaternionSquared);
+    private: static void SetPoseMsgFilterMinimumQuaternionSquared(
+        const FunctionCallbackInfo<Value>& args);
 
-    private: static NAN_METHOD(GetPoseMsgFilterMinimumQuaternionSquared);
+    private: static void GetPoseMsgFilterMinimumQuaternionSquared(
+        const FunctionCallbackInfo<Value>& args);
 
-    private: static NAN_METHOD(GetMessages);
+    private: static void GetMessages(const FunctionCallbackInfo<Value>& args);
 
-    private: static NAN_METHOD(Request);
+    private: static void Request(const FunctionCallbackInfo<Value>& args);
 
-    private: static NAN_METHOD(SetPoseMsgFilterMinimumAge);
+    private: static void SetPoseMsgFilterMinimumAge(
+        const FunctionCallbackInfo<Value>& args);
 
-    private: static NAN_METHOD(GetPoseMsgFilterMinimumAge);
+    private: static void GetPoseMsgFilterMinimumAge(
+        const FunctionCallbackInfo<Value>& args);
 
     private: GazeboInterface* gzIface = nullptr;
 

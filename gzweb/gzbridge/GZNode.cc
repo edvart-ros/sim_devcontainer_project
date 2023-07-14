@@ -15,7 +15,7 @@
  *
 */
 
-#include <nan.h>
+#include <node.h>
 #include "GZNode.hh"
 
 #include "GazeboInterface.hh"
@@ -47,118 +47,120 @@ GZNode::~GZNode()
 };
 
 /////////////////////////////////////////////////
-NAN_MODULE_INIT(GZNode::Init)
+void GZNode::Init(Handle<Object> exports)
 {
+  Isolate* isolate = exports->GetIsolate();
   // Prepare constructor template
-  Local<String> class_name = Nan::New("GZNode").ToLocalChecked();
-
-  Local<FunctionTemplate> tpl = Nan::New<v8::FunctionTemplate>(GZNode::New);
-
-  tpl->SetClassName(class_name);
+  Local<FunctionTemplate> tpl = FunctionTemplate::New(isolate, New);
+  tpl->SetClassName(String::NewFromUtf8(isolate, "GZNode"));
   tpl->InstanceTemplate()->SetInternalFieldCount(1);
   // Prototype
-  Nan::SetPrototypeMethod(tpl, "loadMaterialScripts", LoadMaterialScripts);
+  NODE_SET_PROTOTYPE_METHOD(tpl, "loadMaterialScripts", LoadMaterialScripts);
 
-  Nan::SetPrototypeMethod(tpl, "setConnected", SetConnected);
+  NODE_SET_PROTOTYPE_METHOD(tpl, "setConnected", SetConnected);
 
-  Nan::SetPrototypeMethod(tpl, "setPoseMsgFilterMinimumDistanceSquared", SetPoseMsgFilterMinimumDistanceSquared);
-  Nan::SetPrototypeMethod(tpl, "getPoseMsgFilterMinimumDistanceSquared", GetPoseMsgFilterMinimumDistanceSquared);
-  Nan::SetPrototypeMethod(tpl, "setPoseMsgFilterMinimumQuaternionSquared", SetPoseMsgFilterMinimumQuaternionSquared);
-  Nan::SetPrototypeMethod(tpl, "getPoseMsgFilterMinimumQuaternionSquared", GetPoseMsgFilterMinimumQuaternionSquared);
+  NODE_SET_PROTOTYPE_METHOD(tpl, "setPoseMsgFilterMinimumDistanceSquared", SetPoseMsgFilterMinimumDistanceSquared);
+  NODE_SET_PROTOTYPE_METHOD(tpl, "getPoseMsgFilterMinimumDistanceSquared", GetPoseMsgFilterMinimumDistanceSquared);
+  NODE_SET_PROTOTYPE_METHOD(tpl, "setPoseMsgFilterMinimumQuaternionSquared", SetPoseMsgFilterMinimumQuaternionSquared);
+  NODE_SET_PROTOTYPE_METHOD(tpl, "getPoseMsgFilterMinimumQuaternionSquared", GetPoseMsgFilterMinimumQuaternionSquared);
 
-  Nan::SetPrototypeMethod(tpl, "getPoseMsgFilterMinimumAge",
+  NODE_SET_PROTOTYPE_METHOD(tpl, "getPoseMsgFilterMinimumAge",
       GetPoseMsgFilterMinimumAge);
 
-  Nan::SetPrototypeMethod(tpl, "setPoseMsgFilterMinimumAge",
+  NODE_SET_PROTOTYPE_METHOD(tpl, "setPoseMsgFilterMinimumAge",
       SetPoseMsgFilterMinimumAge);
 
-  Nan::SetPrototypeMethod(tpl, "getMessages", GetMessages);
+  NODE_SET_PROTOTYPE_METHOD(tpl, "getMessages", GetMessages);
 
-  Nan::SetPrototypeMethod(tpl, "request", Request);
+  NODE_SET_PROTOTYPE_METHOD(tpl, "request", Request);
 
-  Nan::SetPrototypeMethod(tpl, "getIsGzServerConnected",
+  NODE_SET_PROTOTYPE_METHOD(tpl, "getIsGzServerConnected",
       GetIsGzServerConnected);
 
-  Nan::SetPrototypeMethod(tpl, "getMaterialScriptsMessage",
+  NODE_SET_PROTOTYPE_METHOD(tpl, "getMaterialScriptsMessage",
       GetMaterialScriptsMessage);
 
-  target->Set(Nan::GetCurrentContext(), class_name, 
-    tpl->GetFunction(Nan::GetCurrentContext()).ToLocalChecked()
-    ).ToChecked();
+  exports->Set(String::NewFromUtf8(isolate, "GZNode"),
+               tpl->GetFunction());
 }
 
 /////////////////////////////////////////////////
-NAN_METHOD(GZNode::New)
+void GZNode::New(const FunctionCallbackInfo<Value>& args)
 {
-  if (info.IsConstructCall()) {
+  if (args.IsConstructCall()) {
     // Invoked as constructor: `new MyObject(...)`
     GZNode* obj = new GZNode();
-    obj->Wrap(info.This());
-    info.GetReturnValue().Set(info.This());
-  }else{
-    return Nan::ThrowTypeError("GZNode::New - called without new keyword");
+    obj->Wrap(args.This());
+    args.GetReturnValue().Set(args.This());
   }
 }
 
 /////////////////////////////////////////////////
-NAN_METHOD(GZNode::LoadMaterialScripts)
+void GZNode::LoadMaterialScripts(const FunctionCallbackInfo<Value>& args)
 {
-  Isolate* isolate = info.GetIsolate();
+  Isolate* isolate = args.GetIsolate();
 
-  if (info.Length() < 1)
+  if (args.Length() < 1)
   {
-    return Nan::ThrowTypeError("GZNode::LoadMaterialScripts - Wrong number of arguments. One arg expected");
+    isolate->ThrowException(Exception::TypeError(
+        String::NewFromUtf8(isolate, "Wrong number of arguments")));
+    return;
   }
 
-  if (!info[0]->IsString())
+  if (!args[0]->IsString())
   {
-    return Nan::ThrowTypeError("GZNode::LoadMaterialScripts - Wrong argument type. String expected.");
+    isolate->ThrowException(Exception::TypeError(
+        String::NewFromUtf8(isolate, "Wrong argument type. String expected.")));
+    return;
   }
 
-  GZNode* obj = ObjectWrap::Unwrap<GZNode>(info.This());
+  GZNode* obj = ObjectWrap::Unwrap<GZNode>(args.This());
 
-  String::Utf8Value path(isolate, info[0]);
+  String::Utf8Value path(args[0]->ToString());
   obj->gzIface->LoadMaterialScripts(std::string(*path));
 
   return;
 }
 
 /////////////////////////////////////////////////
-NAN_METHOD(GZNode::SetConnected)
+void GZNode::SetConnected(const FunctionCallbackInfo<Value>& args)
 {
-
-  GZNode *obj = ObjectWrap::Unwrap<GZNode>(info.This());
-  bool value = Nan::To<bool>(info[0]).ToChecked();
+  GZNode *obj = ObjectWrap::Unwrap<GZNode>(args.This());
+  bool value = args[0]->BooleanValue();
   obj->gzIface->SetConnected(value);
 
   return;
 }
 
 /////////////////////////////////////////////////
-NAN_METHOD(GZNode::GetIsGzServerConnected)
+void GZNode::GetIsGzServerConnected(const FunctionCallbackInfo<Value>& args)
 {
-  GZNode *obj = ObjectWrap::Unwrap<GZNode>(info.This());
+  GZNode *obj = ObjectWrap::Unwrap<GZNode>(args.This());
   bool value = obj->isGzServerConnected;
 
-  info.GetReturnValue().Set(value);
+  args.GetReturnValue().Set(value);
 }
 
 /////////////////////////////////////////////////
-NAN_METHOD(GZNode::GetMaterialScriptsMessage)
+void GZNode::GetMaterialScriptsMessage(const FunctionCallbackInfo<Value>& args)
 {
-  Isolate* isolate = info.GetIsolate();
+  Isolate* isolate = args.GetIsolate();
 
-  if (info.Length() < 1)
+  if (args.Length() < 1)
   {
-    return Nan::ThrowTypeError("GZNode::GetMaterialScriptsMessage - Wrong number of arguments. One arg expected.");
+    isolate->ThrowException(Exception::TypeError(
+        String::NewFromUtf8(isolate, "Wrong number of arguments")));
+    return;
   }
 
-  if (!info[0]->IsString())
+  if (!args[0]->IsString())
   {
-    return Nan::ThrowTypeError("GZNode::GetMaterialScriptsMessage - Wrong argument type. String expected.");
+    isolate->ThrowException(Exception::TypeError(
+        String::NewFromUtf8(isolate, "Wrong argument type. String expected.")));
+    return;
   }
 
-  String::Utf8Value path(isolate, info[0]);
+  String::Utf8Value path(args[0]->ToString());
 
   OgreMaterialParser materialParser;
   materialParser.Load(std::string(*path));
@@ -169,15 +171,16 @@ NAN_METHOD(GZNode::GetMaterialScriptsMessage)
   msg += materialJson;
   msg += "}";
 
-  info.GetReturnValue().Set(Nan::New(msg.c_str()).ToLocalChecked());
+  args.GetReturnValue().Set(String::NewFromUtf8(isolate ,msg.c_str()));
 }
 
 /////////////////////////////////////////////////
-NAN_METHOD(GZNode::SetPoseMsgFilterMinimumDistanceSquared)
+void GZNode::SetPoseMsgFilterMinimumDistanceSquared(const
+    FunctionCallbackInfo<Value>& args)
 {
-  GZNode *obj = ObjectWrap::Unwrap<GZNode>(info.This());
+  GZNode *obj = ObjectWrap::Unwrap<GZNode>(args.This());
 
-  Local<Number> v = Nan::To<Number>(info[0]).ToLocalChecked();
+  Local<Number> v = Local<Number>::Cast(args[0]);
   double value = v->Value();
   obj->gzIface->SetPoseFilterMinimumDistanceSquared(value);
 
@@ -185,18 +188,21 @@ NAN_METHOD(GZNode::SetPoseMsgFilterMinimumDistanceSquared)
 }
 
 /////////////////////////////////////////////////
-NAN_METHOD(GZNode::GetPoseMsgFilterMinimumDistanceSquared)
+void GZNode::GetPoseMsgFilterMinimumDistanceSquared(const
+    FunctionCallbackInfo<Value>& args)
 {
-  GZNode *obj = ObjectWrap::Unwrap<GZNode>(info.This());
+  Isolate* isolate = args.GetIsolate();
+  GZNode *obj = ObjectWrap::Unwrap<GZNode>(args.This());
   double value  = obj->gzIface->GetPoseFilterMinimumDistanceSquared();
-  info.GetReturnValue().Set(Nan::New<Number>(value));
+  args.GetReturnValue().Set(Number::New(isolate ,value));
 }
 
 /////////////////////////////////////////////////////
-NAN_METHOD(GZNode::SetPoseMsgFilterMinimumQuaternionSquared)
+void GZNode::SetPoseMsgFilterMinimumQuaternionSquared(const
+    FunctionCallbackInfo<Value>& args)
 {
-  GZNode *obj = ObjectWrap::Unwrap<GZNode>(info.This());
-  Local<Number> v = Nan::To<Number>(info[0]).ToLocalChecked();
+  GZNode *obj = ObjectWrap::Unwrap<GZNode>(args.This());
+  Local<Number> v = Local<Number>::Cast(args[0]);
   double value = v->Value();
   obj->gzIface->SetPoseFilterMinimumQuaternionSquared(value);
 
@@ -204,58 +210,66 @@ NAN_METHOD(GZNode::SetPoseMsgFilterMinimumQuaternionSquared)
 }
 
 /////////////////////////////////////////////////
-NAN_METHOD(GZNode::GetPoseMsgFilterMinimumQuaternionSquared)
+void GZNode::GetPoseMsgFilterMinimumQuaternionSquared(const
+    FunctionCallbackInfo<Value>& args)
 {
-  GZNode *obj = ObjectWrap::Unwrap<GZNode>(info.This());
+  Isolate* isolate = args.GetIsolate();
+  GZNode *obj = ObjectWrap::Unwrap<GZNode>(args.This());
   double value  = obj->gzIface->GetPoseFilterMinimumQuaternionSquared();
-  info.GetReturnValue().Set(Nan::New<Number>(value));
+  args.GetReturnValue().Set(Number::New(isolate ,value));
 }
 
 /////////////////////////////////////////////////
-NAN_METHOD(GZNode::GetMessages)
+void GZNode::GetMessages(const FunctionCallbackInfo<Value>& args)
 {
+  Isolate* isolate = args.GetIsolate();
 
-  GZNode* obj = ObjectWrap::Unwrap<GZNode>(info.This());
+  GZNode* obj = ObjectWrap::Unwrap<GZNode>(args.This());
 
   std::vector<std::string> msgs = obj->gzIface->PopOutgoingMessages();
-  Local<Array> arguments = Nan::New<Array>(msgs.size());
+  // args.GetReturnValue().Set(Number::New(isolate ,msgs.size()));
+  Local<Array> arguments = Array::New(isolate, msgs.size());
   for (unsigned int i = 0; i < msgs.size(); ++i) {
-    Local<String> v8_msg = Nan::New<String>(msgs[i].c_str()).ToLocalChecked();
-    Nan::Set(arguments, i, v8_msg);
+    arguments->Set(i ,String::NewFromUtf8(isolate, msgs[i].c_str()));
   }
 
-  info.GetReturnValue().Set(arguments);
+  args.GetReturnValue().Set(arguments);
 }
 
 
 ////////////////////////////////////////////////
-NAN_METHOD(GZNode::Request)
+void GZNode::Request(const FunctionCallbackInfo<Value>& args)
 {
-  Isolate* isolate = info.GetIsolate();
+  Isolate* isolate = args.GetIsolate();
 
-  if (info.Length() < 1)
+  if (args.Length() < 1)
   {
-    return Nan::ThrowTypeError("GZNode::Request - Wrong number of arguments. One arg expected.");
+    isolate->ThrowException(Exception::TypeError(
+        String::NewFromUtf8(isolate, "Wrong number of arguments")));
+    return;
   }
 
-  if (!info[0]->IsString())
+  if (!args[0]->IsString())
   {
-    return Nan::ThrowTypeError("GZNode::Request - Wrong argument type. String expected.");
+    isolate->ThrowException(Exception::TypeError(
+        String::NewFromUtf8(isolate, "Wrong argument type. String expected.")));
+    return;
   }
 
-  GZNode* obj = ObjectWrap::Unwrap<GZNode>(info.This());
+  GZNode* obj = ObjectWrap::Unwrap<GZNode>(args.This());
 
-  String::Utf8Value request(isolate, info[0]);
+  String::Utf8Value request(args[0]->ToString());
   obj->gzIface->PushRequest(std::string(*request));
 
   return;
 }
 
 /////////////////////////////////////////////////
-NAN_METHOD(GZNode::SetPoseMsgFilterMinimumAge)
+void GZNode::SetPoseMsgFilterMinimumAge(const
+    FunctionCallbackInfo<Value>& args)
 {
-  GZNode* obj = ObjectWrap::Unwrap<GZNode>(info.This());
-  Local<Number> v = Nan::To<Number>(info[0]).ToLocalChecked();
+  GZNode* obj = ObjectWrap::Unwrap<GZNode>(args.This());
+  Local<Number> v = Local<Number>::Cast(args[0]);
   double value = v->Value();
   obj->gzIface->SetPoseFilterMinimumMsgAge(value);
 
@@ -263,15 +277,16 @@ NAN_METHOD(GZNode::SetPoseMsgFilterMinimumAge)
 }
 
 /////////////////////////////////////////////////
-NAN_METHOD(GZNode::GetPoseMsgFilterMinimumAge)
+void GZNode::GetPoseMsgFilterMinimumAge(const
+    FunctionCallbackInfo<Value>& args)
 {
-  GZNode* obj = ObjectWrap::Unwrap<GZNode>(info.This());
+  GZNode* obj = ObjectWrap::Unwrap<GZNode>(args.This());
   double value  = obj->gzIface->GetPoseFilterMinimumMsgAge();
-  info.GetReturnValue().Set(value);
+  args.GetReturnValue().Set(value);
 }
 
 /////////////////////////////////////////////////
-void InitAll(Local<Object> exports, Local<Value> module, void* priv)
+void InitAll(Handle<Object> exports)
 {
   GZNode::Init(exports);
 }

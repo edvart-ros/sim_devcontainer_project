@@ -6,7 +6,6 @@ build_*
 .DS_Store
 *.*~
 *~
-*.orig
 *.swp
 http/client/assets
 node_modules
