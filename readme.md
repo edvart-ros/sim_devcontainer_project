@@ -1,0 +1,2 @@
+project where i attempt to get a ros workspace and gazebo simulator (with gzweb) working.
+With this we'll help new people get started with ros and gazebo without needing a dedicated ubuntu machine locally.
