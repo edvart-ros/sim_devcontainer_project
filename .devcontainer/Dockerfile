@@ -53,14 +53,13 @@ ENV ROS_DISTRO noetic
 
 # Install vrx ROS and Gazebo deps 
 RUN apt-get install -y ${GAZ} lib${GAZ}-dev ros-${DIST}-gazebo-plugins ros-${DIST}-gazebo-ros ros-${DIST}-hector-gazebo-plugins ros-${DIST}-joy ros-${DIST}-joy-teleop ros-${DIST}-key-teleop ros-${DIST}-robot-localization ros-${DIST}-robot-state-publisher ros-${DIST}-joint-state-publisher ros-${DIST}-rviz ros-${DIST}-ros-base ros-${DIST}-teleop-tools ros-${DIST}-teleop-twist-keyboard ros-${DIST}-velodyne-simulator ros-${DIST}-xacro ros-${DIST}-rqt ros-${DIST}-rqt-common-plugins
-RUN cd /workspaces/sim_devcontainer_project/vrx_ws && rosdep install --from-paths src --ignore-src -r -y
+#RUN cd /workspaces/sim_devcontainer_project/vrx_ws && rosdep install --from-paths src --ignore-src -r -y
+
 
 
 
 # set up gzweb prereqs
-
 RUN apt install -y gazebo11 libgazebo11-dev
-
 
 # Install dependencies
 RUN apt-get install -y build-essential cmake cppcheck curl git gnupg libeigen3-dev libgles2-mesa-dev lsb-release pkg-config protobuf-compiler qtbase5-dev python3-dbg python3-pip python3-venv ruby software-properties-common wget 
