@@ -29,26 +29,19 @@ source devel/setup.bash
 ```
 
 
-TODO: add model paths to GAZEBO_MODEL_PATH
+TODO: fix models not loading properly in browser. manually copy model files? model files are stored in gzweb/http/client/assets
 ```
-source /usr/share/gazebo/setup.sh
-export GAZEBO_MODEL_PATH=<path_to_model>:<another_path_to_model>...
+export GAZEBO_MODEL_PATH=/usr/share/gazebo-11/models:/workspaces/sim_devcontainer_project/vrx_ws/src/vrx/wamv_description/models:/workspaces/sim_devcontainer_project/vrx_ws/src/navier_wamv:/workspaces/sim_devcontainer_project/vrx_ws/src/vrx/wave_gazebo/world_models:/workspaces/sim_devcontainer_project/vrx_ws/src/vrx/wamv_gazebo/models:/workspaces/sim_devcontainer_project/vrx_ws/src/vrx/vrx_gazebo/models
 ```
-
-
 
 
 build gzweb and models
 ```
 cd /workspaces/sim_devcontainer_project/gzweb
 ```
-TODO: find out why this is required (We are root)
-```
-chmod 777 get_local_models.py webify_models_v2.py webify_models.py deploy.sh gzbridge/server.js
-```
 
 
-build gzweb. This imports gazebo models such that they are visible in the gzweb browser later
+build gzweb. This imports the gazebo models that are on GAZEBO_MODEL_PATH such that they are visible in the gzweb browser later
 ```
 npm run deploy --- -m
 ```
