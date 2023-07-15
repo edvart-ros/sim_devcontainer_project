@@ -58,7 +58,6 @@ npm start
 
 
 
-
-
-
-
+TODO: use this for gui/rviz stuff? 
+(enable nvidia runtime)
+https://gist.github.com/sgarciav/8636b50e37def33ae379c3ea3d5d30f7
