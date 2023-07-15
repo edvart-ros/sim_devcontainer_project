@@ -1,5 +1,5 @@
 <launch>
-  <arg name="urdf" default="/workspaces/sim_devcontainer_project/vrx_ws/src/vrx_navier/navier_wamv/navier_wamv.urdf" />
+  <arg name="urdf" default="/workspaces/sim_devcontainer_project/vrx_ws/src/navier_wamv/navier_wamv.urdf" />
   <include file="$(find vrx_gazebo)/launch/sydneyregatta.launch">
         <arg name="urdf" value="$(arg urdf)"/>
         <arg name="gui" value="false" />
