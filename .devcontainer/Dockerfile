@@ -109,4 +109,10 @@ RUN apt-get install -y git
 # Switch back to dialog for any ad-hoc use of apt-get
 ENV DEBIAN_FRONTEND=dialog
 
+
+
+#set up .bashrc for quick sourcing of the environment
 RUN /bin/bash -c "source /usr/share/gazebo/setup.sh"
+
+RUN echo "source /usr/share/gazebo/setup.sh" >> ~/.bashrc && \
+    echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
