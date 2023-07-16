@@ -29,7 +29,7 @@ CFLAGS_Debug := \
 	-std=c++17 \
 	-pthread \
 	-I/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/gazebo-11 \
-	-I/usr/include/sdformat-9.8 \
+	-I/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10 \
 	-I/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/fuel_tools4 \
 	-I/usr/include/x86_64-linux-gnu \
 	-I/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/common3 \
@@ -83,7 +83,7 @@ CFLAGS_Release := \
 	-std=c++17 \
 	-pthread \
 	-I/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/gazebo-11 \
-	-I/usr/include/sdformat-9.8 \
+	-I/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10 \
 	-I/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/fuel_tools4 \
 	-I/usr/include/x86_64-linux-gnu \
 	-I/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/common3 \
