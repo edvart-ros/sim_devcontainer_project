@@ -117,4 +117,3 @@ RUN /bin/bash -c "source /usr/share/gazebo/setup.sh"
 RUN echo "source /usr/share/gazebo/setup.sh" >> ~/.bashrc && \
     echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 
-RUN /bin/bash -c "source /opt/ros/noetic/setup.bash; rosdep install --from-paths /workspaces/sim_devcontainer_project/vrx_ws --ignore-src -r -y"
