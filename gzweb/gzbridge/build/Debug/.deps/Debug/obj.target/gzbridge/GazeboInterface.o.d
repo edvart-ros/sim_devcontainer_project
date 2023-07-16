@@ -1,11 +1,10 @@
-cmd_Debug/obj.target/gzbridge/GazeboInterface.o := g++ '-DNODE_GYP_MODULE_NAME=gzbridge' '-DUSING_UV_SHARED=1' '-DUSING_V8_SHARED=1' '-DV8_DEPRECATION_WARNINGS=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DBUILDING_NODE_EXTENSION' '-DDEBUG' '-D_DEBUG' '-DV8_ENABLE_CHECKS' -I/root/.cache/node-gyp/8.17.0/include/node -I/root/.cache/node-gyp/8.17.0/src -I/root/.cache/node-gyp/8.17.0/deps/openssl/config -I/root/.cache/node-gyp/8.17.0/deps/openssl/openssl/include -I/root/.cache/node-gyp/8.17.0/deps/uv/include -I/root/.cache/node-gyp/8.17.0/deps/zlib -I/root/.cache/node-gyp/8.17.0/deps/v8/include  -fPIC -pthread -Wall -Wextra -Wno-unused-parameter -m64 -std=c++11 -std=c++17 -isystem /usr/include/mit-krb5 -std=c++17 -pthread -I/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/gazebo-11 -I/usr/include/sdformat-9.8 -I/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/fuel_tools4 -I/usr/include/x86_64-linux-gnu -I/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/common3 -I/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/transport8 -I/usr/include/pgm-5.2 -I/usr/include/uuid -I/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/msgs5 -I/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6 -I/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/cmake2 -g -O0 -std=gnu++0x -std=c++17 -MMD -MF ./Debug/.deps/Debug/obj.target/gzbridge/GazeboInterface.o.d.raw   -c -o Debug/obj.target/gzbridge/GazeboInterface.o ../GazeboInterface.cc
+cmd_Debug/obj.target/gzbridge/GazeboInterface.o := g++ '-DNODE_GYP_MODULE_NAME=gzbridge' '-DUSING_UV_SHARED=1' '-DUSING_V8_SHARED=1' '-DV8_DEPRECATION_WARNINGS=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DBUILDING_NODE_EXTENSION' '-DDEBUG' '-D_DEBUG' '-DV8_ENABLE_CHECKS' -I/root/.cache/node-gyp/8.17.0/include/node -I/root/.cache/node-gyp/8.17.0/src -I/root/.cache/node-gyp/8.17.0/deps/openssl/config -I/root/.cache/node-gyp/8.17.0/deps/openssl/openssl/include -I/root/.cache/node-gyp/8.17.0/deps/uv/include -I/root/.cache/node-gyp/8.17.0/deps/zlib -I/root/.cache/node-gyp/8.17.0/deps/v8/include  -fPIC -pthread -Wall -Wextra -Wno-unused-parameter -m64 -std=c++11 -std=c++17 -isystem /usr/include/mit-krb5 -std=c++17 -pthread -I/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/gazebo-11 -I/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10 -I/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/fuel_tools4 -I/usr/include/x86_64-linux-gnu -I/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/common3 -I/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/transport8 -I/usr/include/pgm-5.2 -I/usr/include/uuid -I/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/msgs5 -I/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6 -I/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/cmake2 -g -O0 -std=gnu++0x -std=c++17 -MMD -MF ./Debug/.deps/Debug/obj.target/gzbridge/GazeboInterface.o.d.raw   -c -o Debug/obj.target/gzbridge/GazeboInterface.o ../GazeboInterface.cc
 Debug/obj.target/gzbridge/GazeboInterface.o: ../GazeboInterface.cc \
  /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/gazebo-11/gazebo/gazebo_config.h \
  ../pb2json.hh ../OgreMaterialParser.hh ../GazeboInterface.hh \
  /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/gazebo-11/gazebo/msgs/msgs.hh \
- /usr/include/sdformat-9.8/sdf/sdf.hh \
- /usr/include/sdformat-9.8/sdf/Actor.hh \
- /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Pose3.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/sdf.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Actor.hh \
  /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/gz/math/Pose3.hh \
  /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/gz/math/Quaternion.hh \
  /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/gz/math/Helpers.hh \
@@ -15,10 +14,8 @@ Debug/obj.target/gzbridge/GazeboInterface.o: ../GazeboInterface.cc \
  /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/gz/math/Angle.hh \
  /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/gz/math/Vector3.hh \
  /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/gz/math/Matrix3.hh \
- /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/config.hh \
- /usr/include/sdformat-9.8/sdf/Element.hh \
- /usr/include/sdformat-9.8/sdf/Param.hh \
- /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Element.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Param.hh \
  /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/gz/math.hh \
  /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/gz/math/graph/Edge.hh \
  /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/gz/math/graph/Vertex.hh \
@@ -74,65 +71,61 @@ Debug/obj.target/gzbridge/GazeboInterface.o: ../GazeboInterface.cc \
  /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/gz/math/Temperature.hh \
  /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/gz/math/Triangle.hh \
  /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/gz/math/Vector3Stats.hh \
- /usr/include/sdformat-9.8/sdf/Console.hh \
- /usr/include/sdformat-9.8/sdf/sdf_config.h \
- /usr/include/sdformat-9.8/sdf/system_util.hh \
- /usr/include/sdformat-9.8/sdf/Types.hh \
- /usr/include/sdformat-9.8/sdf/Error.hh \
- /usr/include/sdformat-9.8/sdf/Link.hh \
- /usr/include/sdformat-9.8/sdf/SemanticPose.hh \
- /usr/include/sdformat-9.8/sdf/Joint.hh \
- /usr/include/sdformat-9.8/sdf/AirPressure.hh \
- /usr/include/sdformat-9.8/sdf/Noise.hh \
- /usr/include/sdformat-9.8/sdf/Altimeter.hh \
- /usr/include/sdformat-9.8/sdf/Assert.hh \
- /usr/include/sdformat-9.8/sdf/Exception.hh \
- /usr/include/sdformat-9.8/sdf/Atmosphere.hh \
- /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Temperature.hh \
- /usr/include/sdformat-9.8/sdf/Box.hh \
- /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Box.hh \
- /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Vector3.hh \
- /usr/include/sdformat-9.8/sdf/Camera.hh \
- /usr/include/sdformat-9.8/sdf/Collision.hh \
- /usr/include/sdformat-9.8/sdf/Cylinder.hh \
- /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Cylinder.hh \
- /usr/include/sdformat-9.8/sdf/Filesystem.hh \
- /usr/include/sdformat-9.8/sdf/ForceTorque.hh \
- /usr/include/sdformat-9.8/sdf/Frame.hh \
- /usr/include/sdformat-9.8/sdf/Geometry.hh \
- /usr/include/sdformat-9.8/sdf/Gui.hh \
- /usr/include/sdformat-9.8/sdf/Heightmap.hh \
- /usr/include/sdformat-9.8/sdf/Imu.hh \
- /usr/include/sdformat-9.8/sdf/JointAxis.hh \
- /usr/include/sdformat-9.8/sdf/Lidar.hh \
- /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Angle.hh \
- /usr/include/sdformat-9.8/sdf/Light.hh \
- /usr/include/sdformat-9.8/sdf/Magnetometer.hh \
- /usr/include/sdformat-9.8/sdf/Material.hh \
- /usr/include/sdformat-9.8/sdf/Mesh.hh \
- /usr/include/sdformat-9.8/sdf/Model.hh \
- /usr/include/sdformat-9.8/sdf/NavSat.hh \
- /usr/include/sdformat-9.8/sdf/parser.hh \
- /usr/include/sdformat-9.8/sdf/SDFImpl.hh \
- /usr/include/sdformat-9.8/sdf/Pbr.hh \
- /usr/include/sdformat-9.8/sdf/Physics.hh \
- /usr/include/sdformat-9.8/sdf/Plane.hh \
- /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Plane.hh \
- /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Vector2.hh \
- /usr/include/sdformat-9.8/sdf/Polyline.hh \
- /usr/include/sdformat-9.8/sdf/Root.hh \
- /usr/include/sdformat-9.8/sdf/Scene.hh \
- /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Color.hh \
- /usr/include/sdformat-9.8/sdf/Sky.hh \
- /usr/include/sdformat-9.8/sdf/Sensor.hh \
- /usr/include/sdformat-9.8/sdf/Sphere.hh \
- /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Sphere.hh \
- /usr/include/sdformat-9.8/sdf/Surface.hh \
- /usr/include/sdformat-9.8/sdf/Visual.hh \
- /usr/include/sdformat-9.8/sdf/World.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Console.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/sdf_config.h \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/system_util.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Types.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Error.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Link.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/SemanticPose.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Joint.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/AirPressure.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Noise.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Altimeter.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Assert.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Exception.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Atmosphere.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Box.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Camera.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Collision.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Cylinder.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Filesystem.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/ForceTorque.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Frame.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Geometry.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Gui.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Heightmap.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Imu.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/JointAxis.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Lidar.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Light.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Magnetometer.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Material.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Mesh.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Model.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/NavSat.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/parser.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/SDFImpl.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Pbr.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Physics.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Plane.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Polyline.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Root.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Scene.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Sky.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Sensor.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Sphere.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Surface.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Visual.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/World.hh \
  /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Inertial.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/config.hh \
  /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/MassMatrix3.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Plane.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Pose3.hh \
  /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Quaternion.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Vector2.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Vector3.hh \
  /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/msgs5/ignition/msgs/color.pb.h \
  /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/msgs5/ignition/msgs/header.pb.h \
  /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/msgs5/ignition/msgs/time.pb.h \
@@ -269,9 +262,11 @@ Debug/obj.target/gzbridge/GazeboInterface.o: ../GazeboInterface.cc \
  /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/gazebo-11/gazebo/msgs/world_modify.pb.h \
  /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/gazebo-11/gazebo/msgs/wrench_stamped.pb.h \
  /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/gazebo-11/gazebo/common/SphericalCoordinates.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Angle.hh \
  /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/gazebo-11/gazebo/common/CommonTypes.hh \
  /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/gazebo-11/gazebo/common/Time.hh \
  /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/gazebo-11/gazebo/common/Image.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Color.hh \
  /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/gazebo-11/gazebo/transport/TransportIface.hh \
  /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/gazebo-11/gazebo/transport/TransportTypes.hh \
  /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/gazebo-11/gazebo/transport/SubscribeOptions.hh \
@@ -286,9 +281,11 @@ Debug/obj.target/gzbridge/GazeboInterface.o: ../GazeboInterface.cc \
  /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/gazebo-11/gazebo/transport/Connection.hh \
  /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/gazebo-11/gazebo/common/Event.hh \
  /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/common3/ignition/common/Profiler.hh \
- /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/common3/ignition/common/profiler/Export.hh \
- /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/common3/ignition/common/profiler/detail/Export.hh \
- /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/common3/ignition/common/SingletonT.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/common3/gz/common/Profiler.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/common3/gz/common/profiler/Export.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/common3/gz/common/profiler/detail/Export.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/common3/gz/common/SingletonT.hh \
+ /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/common3/gz/common/config.hh \
  /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/common3/ignition/common/config.hh \
  /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/gazebo-11/gazebo/common/WeakBind.hh \
  /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/gazebo-11/gazebo/transport/CallbackHelper.hh \
@@ -304,9 +301,8 @@ Debug/obj.target/gzbridge/GazeboInterface.o: ../GazeboInterface.cc \
 ../OgreMaterialParser.hh:
 ../GazeboInterface.hh:
 /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/gazebo-11/gazebo/msgs/msgs.hh:
-/usr/include/sdformat-9.8/sdf/sdf.hh:
-/usr/include/sdformat-9.8/sdf/Actor.hh:
-/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Pose3.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/sdf.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Actor.hh:
 /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/gz/math/Pose3.hh:
 /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/gz/math/Quaternion.hh:
 /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/gz/math/Helpers.hh:
@@ -316,10 +312,8 @@ Debug/obj.target/gzbridge/GazeboInterface.o: ../GazeboInterface.cc \
 /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/gz/math/Angle.hh:
 /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/gz/math/Vector3.hh:
 /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/gz/math/Matrix3.hh:
-/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/config.hh:
-/usr/include/sdformat-9.8/sdf/Element.hh:
-/usr/include/sdformat-9.8/sdf/Param.hh:
-/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Element.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Param.hh:
 /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/gz/math.hh:
 /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/gz/math/graph/Edge.hh:
 /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/gz/math/graph/Vertex.hh:
@@ -375,65 +369,61 @@ Debug/obj.target/gzbridge/GazeboInterface.o: ../GazeboInterface.cc \
 /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/gz/math/Temperature.hh:
 /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/gz/math/Triangle.hh:
 /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/gz/math/Vector3Stats.hh:
-/usr/include/sdformat-9.8/sdf/Console.hh:
-/usr/include/sdformat-9.8/sdf/sdf_config.h:
-/usr/include/sdformat-9.8/sdf/system_util.hh:
-/usr/include/sdformat-9.8/sdf/Types.hh:
-/usr/include/sdformat-9.8/sdf/Error.hh:
-/usr/include/sdformat-9.8/sdf/Link.hh:
-/usr/include/sdformat-9.8/sdf/SemanticPose.hh:
-/usr/include/sdformat-9.8/sdf/Joint.hh:
-/usr/include/sdformat-9.8/sdf/AirPressure.hh:
-/usr/include/sdformat-9.8/sdf/Noise.hh:
-/usr/include/sdformat-9.8/sdf/Altimeter.hh:
-/usr/include/sdformat-9.8/sdf/Assert.hh:
-/usr/include/sdformat-9.8/sdf/Exception.hh:
-/usr/include/sdformat-9.8/sdf/Atmosphere.hh:
-/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Temperature.hh:
-/usr/include/sdformat-9.8/sdf/Box.hh:
-/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Box.hh:
-/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Vector3.hh:
-/usr/include/sdformat-9.8/sdf/Camera.hh:
-/usr/include/sdformat-9.8/sdf/Collision.hh:
-/usr/include/sdformat-9.8/sdf/Cylinder.hh:
-/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Cylinder.hh:
-/usr/include/sdformat-9.8/sdf/Filesystem.hh:
-/usr/include/sdformat-9.8/sdf/ForceTorque.hh:
-/usr/include/sdformat-9.8/sdf/Frame.hh:
-/usr/include/sdformat-9.8/sdf/Geometry.hh:
-/usr/include/sdformat-9.8/sdf/Gui.hh:
-/usr/include/sdformat-9.8/sdf/Heightmap.hh:
-/usr/include/sdformat-9.8/sdf/Imu.hh:
-/usr/include/sdformat-9.8/sdf/JointAxis.hh:
-/usr/include/sdformat-9.8/sdf/Lidar.hh:
-/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Angle.hh:
-/usr/include/sdformat-9.8/sdf/Light.hh:
-/usr/include/sdformat-9.8/sdf/Magnetometer.hh:
-/usr/include/sdformat-9.8/sdf/Material.hh:
-/usr/include/sdformat-9.8/sdf/Mesh.hh:
-/usr/include/sdformat-9.8/sdf/Model.hh:
-/usr/include/sdformat-9.8/sdf/NavSat.hh:
-/usr/include/sdformat-9.8/sdf/parser.hh:
-/usr/include/sdformat-9.8/sdf/SDFImpl.hh:
-/usr/include/sdformat-9.8/sdf/Pbr.hh:
-/usr/include/sdformat-9.8/sdf/Physics.hh:
-/usr/include/sdformat-9.8/sdf/Plane.hh:
-/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Plane.hh:
-/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Vector2.hh:
-/usr/include/sdformat-9.8/sdf/Polyline.hh:
-/usr/include/sdformat-9.8/sdf/Root.hh:
-/usr/include/sdformat-9.8/sdf/Scene.hh:
-/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Color.hh:
-/usr/include/sdformat-9.8/sdf/Sky.hh:
-/usr/include/sdformat-9.8/sdf/Sensor.hh:
-/usr/include/sdformat-9.8/sdf/Sphere.hh:
-/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Sphere.hh:
-/usr/include/sdformat-9.8/sdf/Surface.hh:
-/usr/include/sdformat-9.8/sdf/Visual.hh:
-/usr/include/sdformat-9.8/sdf/World.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Console.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/sdf_config.h:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/system_util.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Types.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Error.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Link.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/SemanticPose.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Joint.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/AirPressure.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Noise.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Altimeter.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Assert.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Exception.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Atmosphere.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Box.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Camera.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Collision.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Cylinder.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Filesystem.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/ForceTorque.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Frame.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Geometry.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Gui.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Heightmap.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Imu.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/JointAxis.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Lidar.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Light.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Magnetometer.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Material.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Mesh.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Model.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/NavSat.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/parser.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/SDFImpl.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Pbr.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Physics.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Plane.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Polyline.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Root.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Scene.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Sky.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Sensor.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Sphere.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Surface.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/Visual.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/sdformat-9.10/sdf/World.hh:
 /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Inertial.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/config.hh:
 /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/MassMatrix3.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Plane.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Pose3.hh:
 /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Quaternion.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Vector2.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Vector3.hh:
 /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/msgs5/ignition/msgs/color.pb.h:
 /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/msgs5/ignition/msgs/header.pb.h:
 /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/msgs5/ignition/msgs/time.pb.h:
@@ -570,9 +560,11 @@ Debug/obj.target/gzbridge/GazeboInterface.o: ../GazeboInterface.cc \
 /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/gazebo-11/gazebo/msgs/world_modify.pb.h:
 /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/gazebo-11/gazebo/msgs/wrench_stamped.pb.h:
 /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/gazebo-11/gazebo/common/SphericalCoordinates.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Angle.hh:
 /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/gazebo-11/gazebo/common/CommonTypes.hh:
 /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/gazebo-11/gazebo/common/Time.hh:
 /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/gazebo-11/gazebo/common/Image.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/math6/ignition/math/Color.hh:
 /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/gazebo-11/gazebo/transport/TransportIface.hh:
 /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/gazebo-11/gazebo/transport/TransportTypes.hh:
 /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/gazebo-11/gazebo/transport/SubscribeOptions.hh:
@@ -587,9 +579,11 @@ Debug/obj.target/gzbridge/GazeboInterface.o: ../GazeboInterface.cc \
 /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/gazebo-11/gazebo/transport/Connection.hh:
 /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/gazebo-11/gazebo/common/Event.hh:
 /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/common3/ignition/common/Profiler.hh:
-/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/common3/ignition/common/profiler/Export.hh:
-/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/common3/ignition/common/profiler/detail/Export.hh:
-/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/common3/ignition/common/SingletonT.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/common3/gz/common/Profiler.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/common3/gz/common/profiler/Export.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/common3/gz/common/profiler/detail/Export.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/common3/gz/common/SingletonT.hh:
+/usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/common3/gz/common/config.hh:
 /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/ignition/common3/ignition/common/config.hh:
 /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/gazebo-11/gazebo/common/WeakBind.hh:
 /usr/lib/x86_64-linux-gnu/pkgconfig/../../..//include/gazebo-11/gazebo/transport/CallbackHelper.hh:
